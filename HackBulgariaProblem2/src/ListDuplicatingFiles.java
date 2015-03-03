@@ -27,13 +27,13 @@ public class ListDuplicatingFiles {
 	public static void excludeAllFilesFromAllDirectories(File file) throws IOException{
 		if(file.isFile()) {
 			files.add(file);
-	    }
+	    	}
 		else if(file.isDirectory()){
 			File[] listOfFiles = file.listFiles();
-	    	for(File i : listOfFiles){
-	    		excludeAllFilesFromAllDirectories(i);
-	    	}
-    	}
+	    		for(File i : listOfFiles){
+	    			excludeAllFilesFromAllDirectories(i);
+	    		}
+    		}
 	}
 	
 	public static void listDuplicatingFiles(String dir) throws IOException{
